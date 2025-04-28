@@ -1,0 +1,3 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+Login Request,100,811,649,2323,272.21,0.000%,3.29131,25.10,1.55,7808.1
+TOTAL,100,811,649,2323,272.21,0.000%,3.29131,25.10,1.55,7808.1

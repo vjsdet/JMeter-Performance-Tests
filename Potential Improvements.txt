@@ -1,0 +1,56 @@
+Summary of Findings:
+
+1. The stress test revealed several performance challenges:
+
+2. High response times were observed when the system was under heavy load.
+
+3. Potential server bottlenecks became apparent as user load increased.
+
+4. Error rates showed a tendency to spike under higher concurrency.
+
+5. Throughput plateaued after reaching a certain user threshold, indicating backend saturation.
+
+------------------------------------------------------------------------------------------------------
+Potential Bottlenecks:
+
+1. Server Processing Time:
+ 
+Significant increase in response times as the number of users rose.
+
+2. Database Latency:
+
+Fund Transfer operations heavily relied on database transactions, leading to slower performance.
+
+3. Error Rate:
+
+Likelihood of 4xx and 5xx errors increased during peak loads.
+
+4. Throughput Limit:
+
+Throughput did not scale proportionally with the increase in user count.
+
+---------------------------------------------------------------------------------------------------
+
+Suggested Improvements:
+
+1. Backend Optimization:
+
+2. Increase the database connection pool size to handle more concurrent operations.
+
+3. Optimize SQL queries to ensure faster database responses.
+
+4. Implement asynchronous processing for fund transfer operations wherever feasible.
+
+5. Infrastructure Enhancements:
+
+6. Introduce load balancing mechanisms to distribute the traffic across multiple servers.
+
+7. Configure auto-scaling policies in the cloud environment to adapt to load variations.
+
+-----------------------------------------------------------------------------------------------------
+
+Application Code Improvements:
+
+1. Implement robust error handling mechanisms for invalid user inputs.
+
+2. Validate all user inputs at the frontend and API gateway level to prevent invalid requests from reaching the server.
